@@ -1,2 +1,263 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+	 v2.0 | 20110126
+	 License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+* === GENERAL STYLES ===
+*/
+
+/*
+* — Fonts —
+*/
+$base__font--s: 1.1rem;
+$base__font--m: 1.5rem;
+$base__font--l: 1.9rem;
+$base__font--xl: 2.5rem;
+
+/*
+* — Colors —
+*/
+$lightWhite: #fdf8f8;
+$lightRose: #F0D6C4;
+$lightPurple: #7D6167;
+$purple: #563635;
+$darkPurple: #412827;
+$lightGreen: #A0A083;
+$green: #90914F;
+$darkGreen: #606133;
+
+$borderRadius: 30px;
+
+html, body {
+	height: 100%;
+}
+body {
+	font-style: 62,5%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	box-sizing: border-box;
+}
+h2 {
+	font-size: $base__font--xl;
+}
+h3 {
+	font-size: $base__font--l;
+}
+h4 {
+	font-size: $base__font--m;
+}
+.button {
+	border-radius: $borderRadius;
+	border: none;
+	padding: 1rem 2rem;
+	font-size: $base__font--s;
+	cursor: pointer;
+}
+
+/*
+* === HOMEPAGE STYLES ===
+*/
+/*
+* === hero image ===
+*/
+.hero {
+	background-image: url("../assets/pexels/couple-heart-dark.jpeg");
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	position: relative;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+}
+.header__logo {
+	height: 40px;
+	margin-top: 2rem;
+}
+.nav__list {
+	display: flex;
+	margin: 2rem auto;
+}
+.nav__link {
+	margin: auto .7rem;
+	font-size: $base__font--s;
+	&:link, &:visited {
+		color: $lightWhite;
+		text-decoration: none;
+	}
+}
+.hero__text {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	h1 {
+	font-size: $base__font--xl;
+	text-transform: uppercase;
+	color: $lightWhite;
+	}
+}
+.header__button {
+	background: $lightWhite;
+	color: #444040;
+	margin-top: 2rem;
+}
+
+/*
+* === icon tiles section===
+*/
+.main-tiles {
+	h4 {
+		display: inline-block;
+		color: $purple;
+		margin: 2rem auto;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid $lightWhite;
+	}
+	p {
+		font-size: $base__font--s;
+		color: transparent;
+	}
+	// height: 40rem;
+}
+.icon-tiles__tile {
+	border-radius: $borderRadius;;
+	padding: 4rem 2rem 6rem 2rem;
+	transition: 0.3s ease-in-out;
+	&:hover {
+		background: $purple;
+		h4, p {
+			color: $lightWhite; 
+		}
+	}
+}
+.icon-tiles__img {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 80px;
+}
+.icon-tiles__img-one {
+	background-image: url("../assets/icons/bouquet.svg");
+}
+.icon-tiles__img-two {
+	background-image: url("../assets/icons/church.svg");
+}
+.icon-tiles__img-three {
+	background-image: url("../assets/icons/wedding-cake.svg");
+}
+.icon-tiles__img-four {
+	background-image: url("../assets/icons/camera.svg");
+	height: 70px;
+}
+.icon-tiles__one:hover {
+	.icon-tiles__img-one {
+		background-image: url("../assets/icons/bouquet-hover.svg");
+	}
+}
+.icon-tiles__two:hover {
+	.icon-tiles__img-two {
+		background-image: url("../assets/icons/church-hover.svg");
+	}
+}
+.icon-tiles__three:hover {
+	.icon-tiles__img-three {
+		background-image: url("../assets/icons/wedding-cake-hover.svg");
+	}
+}
+.icon-tiles__four:hover {
+	.icon-tiles__img-four {
+		background-image: url("../assets/icons/camera-hover.svg");
+	}
+}
+.icon-tiles__camera {
+	.img {
+		height: 30px;
+	}
+}
+/*
+* === banner section ===
+*/
+.banner {
+	background-image: url("../assets/pexels/banner-bg.jpeg");
+	background-position: center;
+	height: 30rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	h2 {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.banner__button {
+	background: $green;
+	color: $lightWhite;
+}
 
 
+/*
+* === MEDIA QUERIES ===
+*/
+@media screen and (min-width: 841px) {
+	.nav__link {
+		font-size: $base__font--m;
+	}
+	.icon-tiles {
+	display: flex;
+	}
+	.icon-tiles__tile {
+		width: 25%;
+	}
+	.button {
+		font-size: $base__font--m;
+	}
+}
