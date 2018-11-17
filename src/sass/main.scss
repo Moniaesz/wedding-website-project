@@ -68,8 +68,9 @@ $darkPurple: #412827;
 $lightGreen: #A0A083;
 $green: #90914F;
 $darkGreen: #606133;
+$textColor: #4b4a4a;
 
-$borderRadius: 30px;
+$borderRadius: 10px;
 
 html, body {
 	height: 100%;
@@ -97,7 +98,14 @@ h4 {
 	font-size: $base__font--s;
 	cursor: pointer;
 }
-
+.nav__link {
+	margin: auto .7rem;
+	font-size: $base__font--s;
+	&:link, &:visited, &:active {
+		text-decoration: none;
+		color: $textColor;
+	}
+}
 /*
 * === HOMEPAGE STYLES ===
 */
@@ -126,12 +134,9 @@ h4 {
 	display: flex;
 	margin: 2rem auto;
 }
-.nav__link {
-	margin: auto .7rem;
-	font-size: $base__font--s;
-	&:link, &:visited {
+.nav__link--home {
+	&:link, &:visited,  {
 		color: $lightWhite;
-		text-decoration: none;
 	}
 }
 .hero__text {
@@ -164,19 +169,16 @@ h4 {
 	}
 	p {
 		font-size: $base__font--s;
-		color: transparent;
 	}
-	// height: 40rem;
 }
 .icon-tiles__tile {
-	border-radius: $borderRadius;;
 	padding: 4rem 2rem 6rem 2rem;
 	transition: 0.3s ease-in-out;
-	&:hover {
-		background: $purple;
-		h4, p {
-			color: $lightWhite; 
-		}
+}
+.icon-tiles__tile:nth-child(even) {
+	background: $purple;
+	h4, p {
+		color: $lightWhite;
 	}
 }
 .icon-tiles__img {
@@ -189,40 +191,16 @@ h4 {
 	background-image: url("../assets/icons/bouquet.svg");
 }
 .icon-tiles__img-two {
-	background-image: url("../assets/icons/church.svg");
+	background-image: url("../assets/icons/church-hover.svg");
 }
 .icon-tiles__img-three {
 	background-image: url("../assets/icons/wedding-cake.svg");
 }
 .icon-tiles__img-four {
-	background-image: url("../assets/icons/camera.svg");
+	background-image: url("../assets/icons/camera-hover.svg");
 	height: 70px;
 }
-.icon-tiles__one:hover {
-	.icon-tiles__img-one {
-		background-image: url("../assets/icons/bouquet-hover.svg");
-	}
-}
-.icon-tiles__two:hover {
-	.icon-tiles__img-two {
-		background-image: url("../assets/icons/church-hover.svg");
-	}
-}
-.icon-tiles__three:hover {
-	.icon-tiles__img-three {
-		background-image: url("../assets/icons/wedding-cake-hover.svg");
-	}
-}
-.icon-tiles__four:hover {
-	.icon-tiles__img-four {
-		background-image: url("../assets/icons/camera-hover.svg");
-	}
-}
-.icon-tiles__camera {
-	.img {
-		height: 30px;
-	}
-}
+
 /*
 * === banner section ===
 */
@@ -251,13 +229,67 @@ h4 {
 	.nav__link {
 		font-size: $base__font--m;
 	}
-	.icon-tiles {
+	.icon-tiles__wrapper {
 	display: flex;
 	}
 	.icon-tiles__tile {
 		width: 25%;
 	}
+	.icon-tiles__img-two {
+	background-image: url("../assets/icons/church.svg");
+}
+.icon-tiles__img-four {
+	background-image: url("../assets/icons/camera.svg");
+	height: 70px;
+}
+	.icon-tiles__one:hover {
+		.icon-tiles__img-one {
+			background-image: url("../assets/icons/bouquet-hover.svg");
+		}
+	}
+	.icon-tiles__two:hover {
+		.icon-tiles__img-two {
+			background-image: url("../assets/icons/church-hover.svg");
+		}
+	}
+	.icon-tiles__three:hover {
+		.icon-tiles__img-three {
+			background-image: url("../assets/icons/wedding-cake-hover.svg");
+		}
+	}
+	.icon-tiles__four:hover {
+		.icon-tiles__img-four {
+			background-image: url("../assets/icons/camera-hover.svg");
+		}
+	}
+	.icon-tiles__tile:nth-child(even) {
+	background: none;
+		h4 {
+			color: $purple;
+		}
+	}
+	.icon-tiles__tile {
+	border-radius: $borderRadius;
+	&:hover {
+		background: $purple;
+		h4, p {
+			color: $lightWhite; 
+		}
+	}
+}
+	.icon-tiles__camera {
+		.img {
+			height: 30px;
+		}
+	}
+
 	.button {
 		font-size: $base__font--m;
 	}
+	.main-tiles {
+		p {
+			color: transparent;
+		}
+	}
+
 }
