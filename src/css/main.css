@@ -119,6 +119,10 @@ h4 {
   color: #fdf8f8; }
 
 .hero__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 4rem 0rem;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -132,6 +136,17 @@ h4 {
   background: #fdf8f8;
   color: #444040;
   margin-top: 2rem; }
+
+.social--hero {
+  top: 90%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+.social__img {
+  height: 60px;
+  padding: .4rem; }
 
 /*
 * === mission section===
@@ -260,4 +275,12 @@ h4 {
     margin-right: -3rem;
     height: 30rem; }
   .mission__img {
-    width: 45%; } }
+    width: 45%; }
+  .social--hero {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    flex-direction: column;
+    margin-right: 4rem;
+    width: auto; } }
