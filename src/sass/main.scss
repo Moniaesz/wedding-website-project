@@ -71,6 +71,7 @@ $darkGreen: #606133;
 $textColor: #4b4a4a;
 
 $borderRadius: 10px;
+$boxShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);;
 
 html, body {
 	height: 100%;
@@ -157,6 +158,28 @@ h4 {
 }
 
 /*
+* === mission section===
+*/
+.mission {
+	margin: 3rem auto;
+}
+
+.mission__text {
+	background: $lightWhite;
+	z-index: 1;
+	box-shadow: $boxShadow;
+}
+
+.mission__img {
+	background-image: url("../assets/pexels/couple.jpeg");
+	background-position: center center;
+	background-size: cover;
+	align-self: flex-end;
+	box-shadow: $boxShadow;
+	height: 30rem;
+}
+
+/*
 * === icon tiles section===
 */
 .main-tiles {
@@ -165,7 +188,7 @@ h4 {
 		color: $purple;
 		margin: 2rem auto;
 		padding-bottom: 2rem;
-		border-bottom: 1px solid $lightWhite;
+		border-bottom: 1px solid white;
 	}
 	p {
 		font-size: $base__font--s;
@@ -178,7 +201,7 @@ h4 {
 .icon-tiles__tile:nth-child(even) {
 	background: $purple;
 	h4, p {
-		color: $lightWhite;
+		color: white;
 	}
 }
 .icon-tiles__img {
@@ -293,3 +316,19 @@ h4 {
 	}
 
 }
+@media screen and (min-width: 1087px) {
+	.mission {
+		display: flex;
+		justify-content: center;
+		height: 40rem;
+	}
+	.mission__text {
+		width: 45%;
+		margin-right: -3rem;
+		height: 30rem;
+	}
+	.mission__img {
+		width: 45%;
+	}
+}
+

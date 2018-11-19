@@ -134,6 +134,25 @@ h4 {
   margin-top: 2rem; }
 
 /*
+* === mission section===
+*/
+.mission {
+  margin: 3rem auto; }
+
+.mission__text {
+  background: #fdf8f8;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.mission__img {
+  background-image: url("../assets/pexels/couple.jpeg");
+  background-position: center center;
+  background-size: cover;
+  align-self: flex-end;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  height: 30rem; }
+
+/*
 * === icon tiles section===
 */
 .main-tiles h4 {
@@ -141,7 +160,7 @@ h4 {
   color: #563635;
   margin: 2rem auto;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #fdf8f8; }
+  border-bottom: 1px solid white; }
 
 .main-tiles p {
   font-size: 1.1rem; }
@@ -153,7 +172,7 @@ h4 {
 .icon-tiles__tile:nth-child(even) {
   background: #563635; }
   .icon-tiles__tile:nth-child(even) h4, .icon-tiles__tile:nth-child(even) p {
-    color: #fdf8f8; }
+    color: white; }
 
 .icon-tiles__img {
   background-repeat: no-repeat;
@@ -230,3 +249,15 @@ h4 {
     font-size: 1.5rem; }
   .main-tiles p {
     color: transparent; } }
+
+@media screen and (min-width: 1087px) {
+  .mission {
+    display: flex;
+    justify-content: center;
+    height: 40rem; }
+  .mission__text {
+    width: 45%;
+    margin-right: -3rem;
+    height: 30rem; }
+  .mission__img {
+    width: 45%; } }
