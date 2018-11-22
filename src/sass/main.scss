@@ -129,7 +129,6 @@ h4 {
 }
 .header__logo {
 	height: 40px;
-	margin-top: 2rem;
 }
 .nav__list {
 	display: flex;
@@ -257,6 +256,83 @@ h4 {
 .banner__button {
 	background: $green;
 	color: $lightWhite;
+}
+
+/*
+* === SERVICES STYLES ===
+*/
+.logo {
+	height: 120px;
+}
+.timeline {
+	top: 20rem;
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.timeline__img {
+	height: 80px;
+}
+.timeline::after {
+	content: "";
+	width: 7px;
+	background: $lightGreen;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 50%;
+	border-radius: 10px;
+}
+.timeline__container {
+	position: relative;
+	width: 50%;
+	border-radius: 20px;
+	margin-top: 3rem;
+}
+.timeline__container::after {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: white;
+	border-radius: 50%;
+	border: 3px solid $purple;
+	top: 10px;
+	right: -52px;
+	z-index: 1;
+}
+.timeline__left__container {
+	left: 0;
+}
+.timeline__right__container {
+	left: 50%;
+}
+.timeline__right__container::after {
+	left: -48px;
+}
+
+@media screen and (max-width: 600px) {
+	.timeline__container {
+		width: 99%;
+	}
+	.timeline__right__container {
+		left: 0;
+	}
+	.timeline::after {
+		display: none;
+	}
+	.timeline__container::after {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	.timeline__left__container {
+		margin-left: -2rem;
+	}
+	.timeline__right__container {
+		margin-left: 2rem;
+	}
 }
 
 
