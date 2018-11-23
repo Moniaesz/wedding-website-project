@@ -62,16 +62,50 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   text-align: center;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  color: #4b4a4a; }
 
 h2 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 h3 {
   font-size: 1.9rem; }
 
 h4 {
   font-size: 1.5rem; }
+
+.h4__color {
+  font-size: 1.4rem;
+  color: #90914F;
+  text-transform: uppercase; }
+
+/*
+* === GENERAL STYLES SHARED WITH PAGES
+*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+
+.header__logo {
+  height: 100px;
+  margin-top: 1.4rem;
+  transition: 0.3s ease-out; }
+
+.header__scroll {
+  background: white; }
+  .header__scroll .header__logo {
+    height: 60px; }
+  .header__scroll .header--home {
+    background: #563635; }
+  .header__scroll .nav__list {
+    margin: 1rem auto; }
 
 .button {
   border-radius: 10px;
@@ -93,23 +127,16 @@ h4 {
 /*
 * === hero image ===
 */
+.header--home {
+  box-shadow: none;
+  background: none; }
+
 .hero {
   background-image: url("../assets/pexels/couple-heart-dark.jpeg");
   background-size: cover;
   background-position: center center;
   height: 100vh;
   position: relative; }
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  z-index: 1; }
-
-.header__logo {
-  height: 40px; }
 
 .nav__list {
   display: flex;
@@ -157,7 +184,9 @@ h4 {
 .mission__text {
   background: #fdf8f8;
   z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 3rem;
+  line-height: 2.3rem; }
 
 .mission__img {
   background-image: url("../assets/pexels/couple.jpeg");
@@ -228,11 +257,11 @@ h4 {
 /*
 * === SERVICES STYLES ===
 */
-.logo {
-  height: 120px; }
+.services__content {
+  padding-top: 20rem; }
 
 .timeline {
-  top: 20rem;
+  top: 5rem;
   position: relative;
   max-width: 800px;
   margin: 0 auto; }
@@ -370,9 +399,13 @@ h4 {
     justify-content: center;
     height: 40rem; }
   .mission__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 45%;
     margin-right: -3rem;
-    height: 30rem; }
+    height: 30rem;
+    font-size: 1.3rem; }
   .mission__img {
     width: 45%; }
   .social--hero {

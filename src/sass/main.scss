@@ -57,6 +57,10 @@ $base__font--m: 1.5rem;
 $base__font--l: 1.9rem;
 $base__font--xl: 2.5rem;
 
+//headings
+$h4__color: 1.4rem;
+
+
 /*
 * — Colors —
 */
@@ -71,7 +75,9 @@ $darkGreen: #606133;
 $textColor: #4b4a4a;
 
 $borderRadius: 10px;
-$boxShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);;
+$boxShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$subtleBoxShadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+$transition: 0.3s ease-out;
 
 html, body {
 	height: 100%;
@@ -82,15 +88,53 @@ body {
 	font-weight: 300;
 	text-align: center;
 	box-sizing: border-box;
+	color: $textColor;
 }
 h2 {
 	font-size: $base__font--xl;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 h3 {
 	font-size: $base__font--l;
 }
 h4 {
 	font-size: $base__font--m;
+}
+.h4__color {
+	font-size: $h4__color;
+	color: $green;
+	text-transform: uppercase;
+}
+
+/*
+* === GENERAL STYLES SHARED WITH PAGES
+*/
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	box-shadow: $subtleBoxShadow;
+}
+.header__logo {
+	height: 100px;
+	margin-top: 1.4rem;
+	transition: $transition;
+}
+.header__scroll {
+	background: white;
+	.header__logo {
+		height: 60px;
+	}
+	.header--home {
+		background: $purple;
+	}
+	.nav__list {
+		margin: 1rem auto;
+	}
 }
 .button {
 	border-radius: $borderRadius;
@@ -113,23 +157,16 @@ h4 {
 /*
 * === hero image ===
 */
+.header--home {
+	box-shadow: none;
+	background: none;
+}
 .hero {
 	background-image: url("../assets/pexels/couple-heart-dark.jpeg");
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
 	position: relative;
-}
-.header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: fixed;
-	width: 100%;
-	z-index: 1;
-}
-.header__logo {
-	height: 40px;
 }
 .nav__list {
 	display: flex;
@@ -183,8 +220,9 @@ h4 {
 	background: $lightWhite;
 	z-index: 1;
 	box-shadow: $boxShadow;
+	padding: 3rem;
+	line-height: 2.3rem;
 }
-
 .mission__img {
 	background-image: url("../assets/pexels/couple.jpeg");
 	background-position: center center;
@@ -262,11 +300,11 @@ h4 {
 /*
 * === SERVICES STYLES ===
 */
-.logo {
-	height: 120px;
+.services__content {
+	padding-top: 20rem;
 }
 .timeline {
-	top: 20rem;
+	top: 5rem;
 	position: relative;
 	max-width: 800px;
 	margin: 0 auto;
@@ -449,9 +487,13 @@ h4 {
 		height: 40rem;
 	}
 	.mission__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		width: 45%;
 		margin-right: -3rem;
 		height: 30rem;
+		font-size: 1.3rem;
 	}
 	.mission__img {
 		width: 45%;
