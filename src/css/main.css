@@ -105,7 +105,8 @@ h4 {
   flex-direction: column;
   align-items: center;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 .header__logo {
   height: 40px; }
@@ -237,7 +238,11 @@ h4 {
   margin: 0 auto; }
 
 .timeline__img {
-  height: 80px; }
+  height: 80px;
+  margin-bottom: 1.5rem; }
+
+.timeline__content {
+  padding: 2rem; }
 
 .timeline::after {
   content: "";
@@ -252,8 +257,7 @@ h4 {
 .timeline__container {
   position: relative;
   width: 50%;
-  border-radius: 20px;
-  margin-top: 3rem; }
+  border-radius: 8px; }
 
 .timeline__container::after {
   content: '';
@@ -262,35 +266,63 @@ h4 {
   height: 30px;
   background: white;
   border-radius: 50%;
-  border: 3px solid #563635;
+  border: 3px solid #7D6167;
   top: 10px;
   right: -52px;
   z-index: 1; }
 
 .timeline__left__container {
-  left: 0; }
+  left: 0;
+  background: #fdf8f8; }
 
 .timeline__right__container {
-  left: 50%; }
+  left: 50%;
+  background: #606133;
+  color: #fdf8f8; }
 
 .timeline__right__container::after {
   left: -48px; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
+  .timeline {
+    margin: 0 2rem; }
   .timeline__container {
-    width: 99%; }
+    width: 100%; }
   .timeline__right__container {
-    left: 0; }
+    left: 0;
+    margin: 1.3rem auto; }
   .timeline::after {
     display: none; }
   .timeline__container::after {
     display: none; } }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 881px) {
   .timeline__left__container {
     margin-left: -2rem; }
+  .timeline__left__container::before {
+    content: '';
+    height: 0;
+    width: 0;
+    top: 12px;
+    right: -10px;
+    position: absolute;
+    z-index: 1;
+    border: medium solid #fdf8f8;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent #fdf8f8; }
   .timeline__right__container {
-    margin-left: 2rem; } }
+    margin-left: 2rem; }
+  .timeline__right__container::before {
+    content: '';
+    height: 0;
+    width: 0;
+    top: 10px;
+    left: -10px;
+    position: absolute;
+    z-index: 1;
+    border: medium solid #606133;
+    border-width: 15px 15px 15px 0px;
+    border-color: transparent #606133 transparent transparent; } }
 
 /*
 * === MEDIA QUERIES ===
