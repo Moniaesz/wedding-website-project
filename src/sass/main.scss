@@ -64,7 +64,7 @@ $h4__color: 1.4rem;
 /*
 * — Colors —
 */
-$lightWhite: #fdf8f8;
+$lightWhite: #f9f7f7;
 $lightRose: #F0D6C4;
 $lightPurple: #7D6167;
 $purple: #563635;
@@ -120,7 +120,7 @@ h4 {
 	box-shadow: $subtleBoxShadow;
 }
 .header__logo {
-	height: 100px;
+	height: 90px;
 	margin-top: 1.4rem;
 	transition: $transition;
 }
@@ -128,9 +128,6 @@ h4 {
 	background: white;
 	.header__logo {
 		height: 60px;
-	}
-	.header--home {
-		background: $purple;
 	}
 	.nav__list {
 		margin: 1rem auto;
@@ -159,7 +156,7 @@ h4 {
 */
 .header--home {
 	box-shadow: none;
-	background: none;
+	background: rgba(14, 8, 1, 0.87);
 }
 .hero {
 	background-image: url("../assets/pexels/couple-heart-dark.jpeg");
@@ -170,7 +167,7 @@ h4 {
 }
 .nav__list {
 	display: flex;
-	margin: 2rem auto;
+	margin: 1.5rem auto;
 }
 .nav__link--home {
 	&:link, &:visited,  {
