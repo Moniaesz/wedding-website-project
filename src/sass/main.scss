@@ -56,6 +56,7 @@ $base__font--s: 1.1rem;
 $base__font--m: 1.5rem;
 $base__font--l: 1.9rem;
 $base__font--xl: 2.5rem;
+$base__font--xxl: 2.9rem;
 
 //headings
 $h4__color: 1.4rem;
@@ -77,7 +78,7 @@ $textColor: #4b4a4a;
 $borderRadius: 10px;
 $boxShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $subtleBoxShadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-$transition: 0.3s ease-out;
+$transition: 0.3s ease;
 
 html, body {
 	height: 100%;
@@ -148,6 +149,14 @@ h4 {
 		color: $textColor;
 	}
 }
+.main-content__wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.text__heading {
+	margin-bottom: 2rem;
+}
+
 /*
 * === HOMEPAGE STYLES ===
 */
@@ -159,7 +168,7 @@ h4 {
 	background: rgba(14, 8, 1, 0.87);
 }
 .hero {
-	background-image: url("../assets/pexels/couple-heart-dark.jpeg");
+	background-image: url("../assets/pexels/couple.jpg");
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
@@ -180,19 +189,25 @@ h4 {
 	width: 100%;
 	padding: 4rem 0rem;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	transform: translate(-50%, -50%);
 	left: 50%;
 	h1 {
-	font-size: $base__font--xl;
+	font-size: $base__font--l;
 	text-transform: uppercase;
 	color: $lightWhite;
 	}
 }
 .header__button {
-	background: $lightWhite;
-	color: #444040;
+	background: transparent;
+	color: $lightWhite;
+	border: 2px solid $lightWhite;
 	margin-top: 2rem;
+	transition: $transition;
+	&:hover {
+		background: $lightWhite;
+		color: $textColor;
+	}
 }
 .social--hero {
 	top: 90%;
@@ -210,9 +225,8 @@ h4 {
 * === mission section===
 */
 .mission {
-	margin: 3rem auto;
+	margin: 5rem auto;
 }
-
 .mission__text {
 	background: $lightWhite;
 	z-index: 1;
@@ -221,7 +235,7 @@ h4 {
 	line-height: 2.3rem;
 }
 .mission__img {
-	background-image: url("../assets/pexels/couple.jpeg");
+	background-image: url("../assets/pexels/couple-heart.jpeg");
 	background-position: center center;
 	background-size: cover;
 	align-self: flex-end;
@@ -233,6 +247,9 @@ h4 {
 * === icon tiles section===
 */
 .main-tiles {
+	h3 {
+		margin: 6rem auto 2rem auto;
+	}
 	h4 {
 		display: inline-block;
 		color: $purple;
@@ -278,13 +295,14 @@ h4 {
 * === banner section ===
 */
 .banner {
+	margin: 3rem auto 5rem auto;
 	background-image: url("../assets/pexels/banner-bg.jpeg");
 	background-position: center;
 	height: 30rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	h2 {
+	h3 {
 		margin-bottom: 1.5rem;
 	}
 }
@@ -353,7 +371,12 @@ h4 {
 	left: -48px;
 }
 
+/*
+* === MEDIA QUERIES ===
+*/
+
 @media screen and (max-width: 880px) {
+	//services
 	.timeline {
 		margin: 0 2rem;
 	}
@@ -373,6 +396,24 @@ h4 {
 }
 
 @media screen and (min-width: 881px) {
+	//main page
+	.hero__text {
+		h1 {
+		font-size: $base__font--xxl;
+		}
+	}
+	.nav__link {
+		font-size: $base__font--m;
+	}
+	.button {
+		font-size: $base__font--m;
+	}
+	.banner {
+		h3 {
+			font-size: $base__font--xl;
+		}
+	}
+	//services
 	.timeline__left__container {
 		margin-left: -2rem;
 	}
@@ -405,27 +446,61 @@ h4 {
 	}
 }
 
-
-/*
-* === MEDIA QUERIES ===
-*/
-@media screen and (min-width: 841px) {
-	.nav__link {
-		font-size: $base__font--m;
+@media screen and (min-width: 1087px) {
+	//main page
+	.hero__text {
+		top: 55%;
+	}
+	.social--hero {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		flex-direction: column;
+		margin-right: 4rem;
+		width: auto;
+	}
+	.mission {
+		display: flex;
+		justify-content: center;
+		height: 40rem;
+	}
+	.mission__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 45%;
+		margin-right: -3rem;
+		height: 30rem;
+		font-size: 1.3rem;
+	}
+	.mission__img {
+		width: 45%;
+	}
+	.main-tiles {
+		p {
+			color: transparent;
+		}
 	}
 	.icon-tiles__wrapper {
 	display: flex;
 	}
 	.icon-tiles__tile {
+		margin: 0.5rem;
 		width: 25%;
+		box-shadow: $subtleBoxShadow;
+		&:hover {
+			box-shadow: $boxShadow;
+			width: 30%;
+		}
 	}
 	.icon-tiles__img-two {
-	background-image: url("../assets/icons/church.svg");
-}
-.icon-tiles__img-four {
-	background-image: url("../assets/icons/camera.svg");
-	height: 70px;
-}
+		background-image: url("../assets/icons/church.svg");
+	}
+	.icon-tiles__img-four {
+		background-image: url("../assets/icons/camera.svg");
+		height: 70px;
+	}
 	.icon-tiles__one:hover {
 		.icon-tiles__img-one {
 			background-image: url("../assets/icons/bouquet-hover.svg");
@@ -465,43 +540,5 @@ h4 {
 		.img {
 			height: 30px;
 		}
-	}
-
-	.button {
-		font-size: $base__font--m;
-	}
-	.main-tiles {
-		p {
-			color: transparent;
-		}
-	}
-
-}
-@media screen and (min-width: 1087px) {
-	.mission {
-		display: flex;
-		justify-content: center;
-		height: 40rem;
-	}
-	.mission__text {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: 45%;
-		margin-right: -3rem;
-		height: 30rem;
-		font-size: 1.3rem;
-	}
-	.mission__img {
-		width: 45%;
-	}
-	.social--hero {
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: -1;
-		flex-direction: column;
-		margin-right: 4rem;
-		width: auto;
 	}
 }
