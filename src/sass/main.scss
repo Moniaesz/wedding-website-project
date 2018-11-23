@@ -72,7 +72,7 @@ $purple: #563635;
 $darkPurple: #412827;
 $lightGreen: #A0A083;
 $green: #90914F;
-$darkGreen: #606133;
+$darkGreen: #0e2113;
 $textColor: #4b4a4a;
 
 $borderRadius: 10px;
@@ -235,7 +235,7 @@ h4 {
 	line-height: 2.3rem;
 }
 .mission__img {
-	background-image: url("../assets/pexels/couple-heart.jpeg");
+	background-image: url("../assets/pexels/couple-heart.jpg");
 	background-position: center center;
 	background-size: cover;
 	align-self: flex-end;
@@ -264,6 +264,11 @@ h4 {
 .icon-tiles__tile {
 	padding: 4rem 2rem 6rem 2rem;
 	transition: 0.3s ease-in-out;
+}
+.icon-tiles__tile:nth-child(odd) {
+	h4 {
+	border-bottom: 1px solid $lightPurple; 
+	}
 }
 .icon-tiles__tile:nth-child(even) {
 	background: $purple;
@@ -306,7 +311,6 @@ h4 {
 		margin-bottom: 1.5rem;
 	}
 }
-
 .banner__button {
 	background: $green;
 	color: $lightWhite;
@@ -315,11 +319,41 @@ h4 {
 /*
 * === SERVICES STYLES ===
 */
+//services description
+.services__text__descritpion {
+	padding: 4rem 2rem;
+	color: $lightWhite;
+	background-image: url("../assets/pexels/bouqet-roses-purple-slim.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.services__text__heading {
+	max-width: 550px;
+	margin: 0 auto;
+	h4 {
+		color: $lightRose;
+	}
+	h2 {
+		color: $lightWhite;
+	}
+	p {
+		margin-top: 1.3rem;
+		line-height: 33px;
+		font-size: $base__font--s;
+	}
+}
+
+//services content
 .services__content {
-	padding-top: 20rem;
+	padding-top: 15rem;
+}
+//timeline
+.offer__text__heading {
+	margin-top: 4rem;
 }
 .timeline {
-	top: 5rem;
+	top: 2rem;
 	position: relative;
 	max-width: 800px;
 	margin: 0 auto;
@@ -329,8 +363,11 @@ h4 {
 	margin-bottom: 1.5rem;
 }
 .timeline__content {
+	p {
+		font-size: $base__font--s;
+	}
 	padding: 2rem;
-}
+	}
 .timeline::after {
 	content: "";
 	width: 7px;
@@ -364,7 +401,7 @@ h4 {
 }
 .timeline__right__container {
 	left: 50%;
-	background: $darkGreen;
+	background: $purple;
 	color: $lightWhite;
 }
 .timeline__right__container::after {
@@ -440,9 +477,9 @@ h4 {
 		left: -10px;
 		position: absolute;
 		z-index: 1;
-		border: medium solid $darkGreen;
+		border: medium solid $purple;
 		border-width:  15px 15px 15px 0px;
-		border-color:  transparent  $darkGreen transparent transparent;
+		border-color:  transparent  $purple transparent transparent;
 	}
 }
 
@@ -521,6 +558,17 @@ h4 {
 			background-image: url("../assets/icons/camera-hover.svg");
 		}
 	}
+	.icon-tiles__tile:nth-child(odd) {
+		h4 {
+		border-bottom: none; 
+		}
+		&:hover {
+			h4 {
+				border-bottom: 1px solid $lightWhite; 
+			}
+		}
+	}
+
 	.icon-tiles__tile:nth-child(even) {
 	background: none;
 		h4 {
