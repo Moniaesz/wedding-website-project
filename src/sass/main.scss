@@ -53,6 +53,7 @@ table {
 * — Fonts —
 */
 $base__font--s: 1.1rem;
+$base__font--sm: 1.2rem;
 $base__font--m: 1.5rem;
 $base__font--l: 1.9rem;
 $base__font--xl: 2.5rem;
@@ -83,6 +84,10 @@ $transition: 0.3s ease;
 html, body {
 	height: 100%;
 }
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
 body {
 	font-style: 62,5%;
 	font-family: 'Lato', sans-serif;
@@ -101,6 +106,9 @@ h3 {
 }
 h4 {
 	font-size: $base__font--m;
+}
+h5 {
+	font-size: $base__font--sm;
 }
 .h4__color {
 	font-size: $h4__color;
@@ -311,7 +319,7 @@ h4 {
 		margin-bottom: 1.5rem;
 	}
 }
-.banner__button {
+.button--color {
 	background: $green;
 	color: $lightWhite;
 }
@@ -343,10 +351,9 @@ h4 {
 		font-size: $base__font--s;
 	}
 }
-
 //services content
-.services__content {
-	padding-top: 15rem;
+.page-content {
+	padding-top: 11.5rem;
 }
 //timeline
 .offer__text__heading {
@@ -407,6 +414,68 @@ h4 {
 .timeline__right__container::after {
 	left: -48px;
 }
+
+/*
+* === CONTACT STYLES ===
+*/
+//contact details
+.contact-details {
+	background: $lightWhite;
+}
+.contact-details__column {
+	padding-top: 2.7rem;
+	max-width: 300px;
+	margin: 0 auto;
+	h5 {
+		color: $purple;
+		font-weight: bold;
+	}
+	h5, p {
+		line-height: 1.8rem;
+	}
+	p {
+		margin-top: 1rem;
+		font-size: $base__font--s;
+	}
+}
+.contact-details__address {
+	padding-bottom: 2.7rem;
+}
+//contact-form
+.form__wrapper {
+	max-width: 650px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 1.3rem;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: auto 2rem;
+}
+.form__label {
+	font-size: $base__font--sm;
+		padding: 0.5rem 0.3rem;
+}
+.form__input, .form__select {
+	padding: 1rem 0.3rem;
+}
+.form__textarea {
+	height: 10rem;
+	border-radius: $borderRadius;
+}
+.form__input, .form__textarea, .form__select {
+	background: $lightWhite;
+	border: 1px solid #d8d5d5;
+	border-radius: 5px;
+}
+.form__label, .button--form {
+	margin-top: 1.7rem;
+}
+.input-submit {
+	cursor: pointer;
+}
+
 
 /*
 * === MEDIA QUERIES ===
@@ -480,6 +549,20 @@ h4 {
 		border: medium solid $purple;
 		border-width:  15px 15px 15px 0px;
 		border-color:  transparent  $purple transparent transparent;
+	}
+	//contact
+	.contact-details__inner-wrapper {
+		max-width: 1300px;
+		margin: 0 auto; 
+		display: flex;
+		h5 {
+			margin-top: .6rem;
+		}
+	}
+	.contact-details__column {
+		p {
+			font-size: $base__font--sm;
+		}
 	}
 }
 
@@ -568,7 +651,6 @@ h4 {
 			}
 		}
 	}
-
 	.icon-tiles__tile:nth-child(even) {
 	background: none;
 		h4 {
@@ -588,5 +670,9 @@ h4 {
 		.img {
 			height: 30px;
 		}
+	}
+//contact--form
+	.form__label {
+		font-size: $base__font--m;
 	}
 }
