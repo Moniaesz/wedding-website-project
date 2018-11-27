@@ -145,6 +145,9 @@ h5 {
 		margin: 1rem auto;
 	}
 }
+.page-content {
+	padding-top: 11.5rem;
+}
 .button {
 	border-radius: $borderRadius;
 	border: none;
@@ -393,8 +396,8 @@ h5 {
 	}
 }
 //services content
-.page-content {
-	padding-top: 11.5rem;
+.page-content--services {
+	padding-top: 10rem;
 }
 //timeline
 .offer__text__heading {
@@ -454,6 +457,30 @@ h5 {
 }
 .timeline__right__container::after {
 	left: -48px;
+}
+.timeline__left__container::before {
+	content: '';
+	height: 0;
+	width: 0;
+	top: 10px;
+	left: -10px;
+	position: absolute;
+	z-index: 1;
+	border: medium solid $lightWhite;
+	border-width:  15px 15px 15px 0px;
+	border-color:  transparent $lightWhite transparent transparent ;
+}
+.timeline__right__container::before {
+	content: '';
+	height: 0;
+	width: 0;
+	top: 10px;
+	left: -10px;
+	position: absolute;
+	z-index: 1;
+	border: medium solid $purple;
+	border-width:  15px 15px 15px 0px;
+	border-color:  transparent  $purple transparent transparent;
 }
 
 /*
@@ -528,20 +555,25 @@ h5 {
 @media screen and (max-width: 880px) {
 	//services
 	.timeline {
-		margin: 0 2rem;
+		margin: 0 2rem 5rem 2rem;
 	}
 	.timeline__container {
 		width: 100%;
+		margin-left: 1rem;
 	}
 	.timeline__right__container {
 		left: 0;
-		margin: 1.3rem auto;
+		margin-top: 1.3rem;
+		margin-bottom: 1.3rem;
 	}
 	.timeline::after {
-		display: none;
+		left: -18px;
+		width: 5px;
 	}
 	.timeline__container::after {
-		display: none;
+		left: -45px;
+		width: 20px;
+		height: 20px;
 	}
 }
 
@@ -577,31 +609,13 @@ h5 {
 		margin-left: -2rem;
 	}
 	.timeline__left__container::before {
-		content: '';
-		height: 0;
-		width: 0;
 		top: 12px;
-		right: -10px;
-		position: absolute;
-		z-index: 1;
-		border: medium solid $lightWhite;
+		left: 395px;
 		border-width:  15px 0 15px 15px;
 		border-color:  transparent transparent transparent $lightWhite;
 	}
 	.timeline__right__container {
 		margin-left: 2rem;
-	}
-	.timeline__right__container::before {
-		content: '';
-		height: 0;
-		width: 0;
-		top: 10px;
-		left: -10px;
-		position: absolute;
-		z-index: 1;
-		border: medium solid $purple;
-		border-width:  15px 15px 15px 0px;
-		border-color:  transparent  $purple transparent transparent;
 	}
 	//contact
 	.contact-details__inner-wrapper {
