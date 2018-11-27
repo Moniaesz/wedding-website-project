@@ -100,15 +100,17 @@ h5 {
   z-index: 9999;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 
+.logo {
+  height: 70px; }
+
 .header__logo {
-  height: 90px;
   margin-top: 1.4rem;
   transition: 0.3s ease; }
 
 .header__scroll {
   background: white; }
   .header__scroll .header__logo {
-    height: 60px; }
+    height: 40px; }
   .header__scroll .nav__list {
     margin: 1rem auto; }
 
@@ -132,6 +134,41 @@ h5 {
 
 .text__heading {
   margin-bottom: 2rem; }
+
+.footer {
+  background: linear-gradient(to bottom right, #0e2113, #563635);
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  color: #f9f7f7; }
+
+.footer__text {
+  line-height: 28px; }
+  .footer__text h4 {
+    color: #A0A083;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem; }
+  .footer__text p {
+    font-size: 1.1rem; }
+
+.footer__column {
+  margin-top: 1.7rem; }
+
+.footer__column:first-of-type {
+  margin-top: 0; }
+
+.logo--footer {
+  opacity: 0.7; }
+
+.social--footer {
+  margin-top: 1rem; }
+  .social--footer img {
+    height: 50px; }
+
+.copy {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.44);
+  padding-top: 1.2rem; }
 
 /*
 * === HOMEPAGE STYLES ===
@@ -210,7 +247,6 @@ h5 {
   background-position: center center;
   background-size: cover;
   align-self: flex-end;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   height: 30rem; }
 
 /*
@@ -264,10 +300,10 @@ h5 {
 * === banner section ===
 */
 .banner {
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto 3rem auto;
   background-image: url("../assets/pexels/banner-bg.jpeg");
   background-position: center;
-  height: 30rem;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -311,7 +347,7 @@ h5 {
   top: 2rem;
   position: relative;
   max-width: 800px;
-  margin: 0 auto; }
+  margin: 0 auto 6rem auto; }
 
 .timeline__img {
   height: 80px;
@@ -364,6 +400,9 @@ h5 {
 /*
 * === CONTACT STYLES ===
 */
+.contact__text__heading {
+  margin-top: 2.5rem; }
+
 .contact-details {
   background: #f9f7f7; }
 
@@ -385,7 +424,7 @@ h5 {
 
 .form__wrapper {
   max-width: 650px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   text-align: left;
   padding: 1.3rem; }
 
@@ -433,14 +472,22 @@ h5 {
     display: none; } }
 
 @media screen and (min-width: 881px) {
+  .footer__inner-wrapper {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center; }
   .hero__text h1 {
     font-size: 2.9rem; }
   .nav__link {
     font-size: 1.5rem; }
   .button {
     font-size: 1.5rem; }
-  .banner h3 {
-    font-size: 2.5rem; }
+  .banner {
+    height: 30rem; }
+    .banner h3 {
+      font-size: 2.5rem; }
   .timeline__left__container {
     margin-left: -2rem; }
   .timeline__left__container::before {
@@ -500,7 +547,8 @@ h5 {
     height: 30rem;
     font-size: 1.3rem; }
   .mission__img {
-    width: 45%; }
+    width: 45%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
   .main-tiles p {
     color: transparent; }
   .icon-tiles__wrapper {

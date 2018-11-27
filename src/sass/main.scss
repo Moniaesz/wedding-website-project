@@ -52,6 +52,7 @@ table {
 /*
 * — Fonts —
 */
+$base__font--xs: 0.8rem;
 $base__font--s: 1.1rem;
 $base__font--sm: 1.2rem;
 $base__font--m: 1.5rem;
@@ -85,8 +86,8 @@ html, body {
 	height: 100%;
 }
 button, input, select, textarea {
-  font-family : inherit;
-  font-size   : 100%;
+	font-family : inherit;
+	font-size   : 100%;
 }
 body {
 	font-style: 62,5%;
@@ -128,15 +129,17 @@ h5 {
 	z-index: 9999;
 	box-shadow: $subtleBoxShadow;
 }
+.logo {
+	height: 70px;
+}
 .header__logo {
-	height: 90px;
 	margin-top: 1.4rem;
 	transition: $transition;
 }
 .header__scroll {
 	background: white;
 	.header__logo {
-		height: 60px;
+		height: 40px;
 	}
 	.nav__list {
 		margin: 1rem auto;
@@ -163,6 +166,45 @@ h5 {
 }
 .text__heading {
 	margin-bottom: 2rem;
+}
+//footer
+.footer {
+	background: linear-gradient(to bottom right, $darkGreen, $purple);
+	padding: 1.5rem 1rem 1.5rem 1rem;
+	color: $lightWhite;
+}
+.footer__text {
+	line-height: 28px;
+	h4 {
+		color: $lightGreen;
+		font-size: $base__font--m;
+		margin-bottom: 0.6rem;
+	}
+	p {
+		font-size: $base__font--s;
+	}
+}
+.footer__column {
+	margin-top: 1.7rem;
+}
+.footer__column:first-of-type {
+	margin-top: 0;
+}
+.logo--footer {
+	opacity: 0.7;
+}
+.social--footer {
+	margin-top: 1rem;
+	img {
+		height: 50px;
+	}
+}
+.copy {
+	font-size: $base__font--xs;
+	opacity: 0.7;
+	margin-top: 3rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.44);
+	padding-top: 1.2rem;
 }
 
 /*
@@ -247,7 +289,6 @@ h5 {
 	background-position: center center;
 	background-size: cover;
 	align-self: flex-end;
-	box-shadow: $boxShadow;
 	height: 30rem;
 }
 
@@ -308,10 +349,10 @@ h5 {
 * === banner section ===
 */
 .banner {
-	margin: 3rem auto 5rem auto;
+	margin: 3rem auto 3rem auto;
 	background-image: url("../assets/pexels/banner-bg.jpeg");
 	background-position: center;
-	height: 30rem;
+	height: 18rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -363,7 +404,7 @@ h5 {
 	top: 2rem;
 	position: relative;
 	max-width: 800px;
-	margin: 0 auto;
+	margin: 0 auto 6rem auto;
 }
 .timeline__img {
 	height: 80px;
@@ -419,6 +460,9 @@ h5 {
 * === CONTACT STYLES ===
 */
 //contact details
+.contact__text__heading {
+	margin-top: 2.5rem;
+}
 .contact-details {
 	background: $lightWhite;
 }
@@ -444,7 +488,7 @@ h5 {
 //contact-form
 .form__wrapper {
 	max-width: 650px;
-	margin: 0 auto;
+	margin: 0 auto 2rem auto;
 	text-align: left;
 	padding: 1.3rem;
 }
@@ -502,6 +546,14 @@ h5 {
 }
 
 @media screen and (min-width: 881px) {
+	//footer 
+	.footer__inner-wrapper {
+		display: flex;
+		max-width: 1300px;
+		margin: 0 auto;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 	//main page
 	.hero__text {
 		h1 {
@@ -515,6 +567,7 @@ h5 {
 		font-size: $base__font--m;
 	}
 	.banner {
+		height: 30rem;
 		h3 {
 			font-size: $base__font--xl;
 		}
@@ -596,6 +649,7 @@ h5 {
 	}
 	.mission__img {
 		width: 45%;
+		box-shadow: $boxShadow;
 	}
 	.main-tiles {
 		p {
