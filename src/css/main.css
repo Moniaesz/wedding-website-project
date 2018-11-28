@@ -425,6 +425,77 @@ h5 {
   border-color: transparent #563635 transparent transparent; }
 
 /*
+* === PORTFOLIO STYLES ===
+*/
+.portolio__text__heading {
+  margin-top: 2.5rem; }
+
+.portfolio-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+  grid-gap: 15px;
+  justify-content: center;
+  margin-bottom: 2.5rem; }
+
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.img-one {
+  background-image: url("../assets/pexels/wedding-room.jpeg"); }
+
+.img-two {
+  background-image: url("../assets/pexels/bouqets.jpeg"); }
+
+.img-three {
+  background-image: url("../assets/pexels/wedding-cake2.jpeg"); }
+
+.img-four {
+  background-image: url("../assets/pexels/couple-green.jpeg"); }
+
+.img-five {
+  background-image: url("../assets/pexels/couple-mountain.jpeg"); }
+
+.img-six {
+  background-image: url("../assets/pexels/table-decoration.jpeg"); }
+
+.img-seven {
+  background-image: url("../assets/pexels/bride-girls.jpeg"); }
+
+.img-eight {
+  background-image: url("../assets/pexels/decoration.jpeg"); }
+
+.img-nine {
+  background-image: url("../assets/pexels/bouqet-roses.jpeg"); }
+
+.img-ten {
+  background-image: url("../assets/pexels/couple-smile.jpeg"); }
+
+.img-eleven {
+  background-image: url("../assets/pexels/wedding-rings.jpeg"); }
+
+.img-twelve {
+  background-image: url("../assets/pexels/dress.jpeg"); }
+
+.img-thirteen {
+  background-image: url("../assets/pexels/decoration-pink.jpeg"); }
+
+.img-fourteen {
+  background-image: url("../assets/pexels/paris-wedding-crop.jpeg"); }
+
+.img-fifteen {
+  background-image: url("../assets/pexels/wooden.jpeg"); }
+
+.img-sixteen {
+  background-image: url("../assets/pexels/beach.jpeg"); }
+
+/*
 * === CONTACT STYLES ===
 */
 .contact__text__heading {
