@@ -63,7 +63,6 @@ $base__font--xxl: 2.9rem;
 //headings
 $h4__color: 1.4rem;
 
-
 /*
 * — Colors —
 */
@@ -97,6 +96,10 @@ body {
 	box-sizing: border-box;
 	color: $textColor;
 }
+
+/*
+* === GENERAL STYLES SHARED WITH PAGES
+*/
 h2 {
 	font-size: $base__font--xl;
 	margin-top: 1.5rem;
@@ -116,10 +119,6 @@ h5 {
 	color: $green;
 	text-transform: uppercase;
 }
-
-/*
-* === GENERAL STYLES SHARED WITH PAGES
-*/
 .header {
 	display: flex;
 	flex-direction: column;
@@ -219,6 +218,7 @@ h5 {
 .header--home {
 	box-shadow: none;
 	background: rgba(14, 8, 1, 0.87);
+	background: rgba(10, 16, 9, 0.96);
 }
 .hero {
 	background-image: url("../assets/pexels/couple.jpg");
@@ -369,7 +369,7 @@ h5 {
 }
 
 /*
-* === SERVICES STYLES ===
+* === SERVICES PAGE STYLES ===
 */
 //services description
 .services__text__descritpion {
@@ -484,8 +484,12 @@ h5 {
 }
 
 /*
-* === PORTFOLIO STYLES ===
+* === PORTFOLIO PAGE STYLES ===
 */
+.portfolio {
+	max-width: 1800px;
+	margin: 0 auto;
+}
 .portolio__text__heading {
 	margin-top: 2.5rem;
 }
@@ -556,7 +560,7 @@ h5 {
 }
 
 /*
-* === CONTACT STYLES ===
+* === CONTACT PAGE STYLES ===
 */
 //contact details
 .contact__text__heading {
@@ -623,7 +627,6 @@ h5 {
 /*
 * === MEDIA QUERIES ===
 */
-
 @media screen and (max-width: 880px) {
 	//services
 	.timeline {

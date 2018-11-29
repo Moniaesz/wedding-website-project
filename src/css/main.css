@@ -69,6 +69,9 @@ body {
   box-sizing: border-box;
   color: #4b4a4a; }
 
+/*
+* === GENERAL STYLES SHARED WITH PAGES
+*/
 h2 {
   font-size: 2.5rem;
   margin-top: 1.5rem;
@@ -88,9 +91,6 @@ h5 {
   color: #90914F;
   text-transform: uppercase; }
 
-/*
-* === GENERAL STYLES SHARED WITH PAGES
-*/
 .header {
   display: flex;
   flex-direction: column;
@@ -181,7 +181,8 @@ h5 {
 */
 .header--home {
   box-shadow: none;
-  background: rgba(14, 8, 1, 0.87); }
+  background: rgba(14, 8, 1, 0.87);
+  background: rgba(10, 16, 9, 0.96); }
 
 .hero {
   background-image: url("../assets/pexels/couple.jpg");
@@ -318,7 +319,7 @@ h5 {
   color: #f9f7f7; }
 
 /*
-* === SERVICES STYLES ===
+* === SERVICES PAGE STYLES ===
 */
 .services__text__descritpion {
   padding: 4rem 2rem;
@@ -425,8 +426,12 @@ h5 {
   border-color: transparent #563635 transparent transparent; }
 
 /*
-* === PORTFOLIO STYLES ===
+* === PORTFOLIO PAGE STYLES ===
 */
+.portfolio {
+  max-width: 1800px;
+  margin: 0 auto; }
+
 .portolio__text__heading {
   margin-top: 2.5rem; }
 
@@ -496,7 +501,7 @@ h5 {
   background-image: url("../assets/pexels/beach.jpeg"); }
 
 /*
-* === CONTACT STYLES ===
+* === CONTACT PAGE STYLES ===
 */
 .contact__text__heading {
   margin-top: 2.5rem; }
