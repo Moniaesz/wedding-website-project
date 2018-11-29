@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.79;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #672323;
+      }
+
+      .cls-3 {
+        opacity: 0.16;
+      }
+
+      .cls-4 {
+        stroke: #707070;
+        opacity: 0.99;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="facebook-p" transform="translate(-106 -4903.095)">
+    <g id="facebook-logo" class="cls-1" transform="translate(142 4928.387)">
+      <path id="Path_65" data-name="Path 65" class="cls-2" d="M42.6.008,37.489,0c-5.748,0-9.463,3.811-9.463,9.71v4.477H22.881a.8.8,0,0,0-.8.8v6.486a.8.8,0,0,0,.8.8h5.144V38.65a.8.8,0,0,0,.8.8h6.712a.8.8,0,0,0,.8-.8V22.283h6.015a.8.8,0,0,0,.8-.8l0-6.486a.805.805,0,0,0-.8-.8H36.347v-3.8c0-1.824.435-2.75,2.811-2.75H42.6a.8.8,0,0,0,.8-.8V.813A.8.8,0,0,0,42.6.008Z" transform="translate(-22.077)"/>
+    </g>
+    <g id="Group_70" data-name="Group 70" class="cls-3" transform="translate(24 -991.905)">
+      <g id="Ellipse_8" data-name="Ellipse 8" class="cls-4" transform="translate(82 5895)">
+        <circle class="cls-5" cx="48" cy="48" r="48"/>
+        <circle class="cls-6" cx="48" cy="48" r="47.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
