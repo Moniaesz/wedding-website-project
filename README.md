@@ -1,10 +1,10 @@
-### WEDDING PLANNER WEBSITE
+### Wedding Planner Website
 
-Project of Wedding Planner website to practice BEM Methodology as well as combining grid & flexbox layout and animation with ScrollReveal.js library.
+Project of Wedding Planner website to practice BEM Methodology as well as combining grid & flexbox layout and try out animation with ScrollReveal.js library.
 
 Prototyped in Adobe XD.
 
-Deployed with Netlify, live version can be seen:
+Deployed with Netlify, live version can be seen at:
 
 https://wedding-craft.netlify.com/
 
