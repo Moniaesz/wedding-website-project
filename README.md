@@ -5,7 +5,11 @@ Project of Wedding Planner website to practice BEM Methodology as well as combin
 Prototyped in Adobe XD.
 
 ![style guide](readme-img/style-guide.jpg)
+
+#### Desktop layout
 ![prototype-desktop](readme-img/wedding-craft-desktop.jpg)
+
+#### Mobile layout
 ![prototype-mobile](readme-img/wedding-craft-mobile.jpg)
 
 Deployed with Netlify, live version can be seen at:
