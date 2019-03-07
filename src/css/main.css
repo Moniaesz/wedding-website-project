@@ -88,7 +88,7 @@ h5 {
 
 .h4__color {
   font-size: 1.4rem;
-  color: #90914F;
+  color: #0e2113;
   text-transform: uppercase; }
 
 .header {
@@ -142,6 +142,9 @@ h5 {
   background: linear-gradient(to bottom right, #0e2113, #563635);
   padding: 1.5rem 1rem 1.5rem 1rem;
   color: #f9f7f7; }
+  .footer a {
+    color: #F0D6C4;
+    text-decoration: none; }
 
 .footer__text {
   line-height: 28px; }
@@ -172,6 +175,11 @@ h5 {
   margin-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.44);
   padding-top: 1.2rem; }
+
+.created {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 1rem; }
 
 /*
 * === HOMEPAGE STYLES ===
@@ -315,7 +323,7 @@ h5 {
     margin-bottom: 1.5rem; }
 
 .button--color {
-  background: #90914F;
+  background: #0e2113;
   color: #f9f7f7; }
 
 /*
